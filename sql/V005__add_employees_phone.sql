@@ -1,0 +1,1 @@
+ALTER table employees add column phone varchar(10) null after title_id;
