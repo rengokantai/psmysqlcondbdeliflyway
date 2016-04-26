@@ -150,8 +150,20 @@ collaborate with other developers:
 backup local db first, pull git repo
 
 #####delivery workflow
-download teamcity,set
+download teamcity,set  
+first, set project. name=Payroll  
+Then create build configuration
 ```
 name: Test
-build configID: Payroll_TestDropAndCreateDbFromMigrations
+build configID: Payroll_Test
 ```
+set: typeof vcs: Git  
+VCS root name: flyway root
+Fetch URL:same  
+create build steps:add build step  
+run-> Executable with parameters  
+executable: ci.bat  
+save->run.
+#####Setting up teamcity to automatically kick off
+trigger->vcs trigger
+
